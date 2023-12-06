@@ -8,6 +8,12 @@ let printOddNumbers = function(arr) {
     });
 };
 printOddNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+//output
+// 1
+// 3
+// 5
+// 7
+// 9
 
 // 2.Convert all the strings to title caps in a string array:
 let convertToTitleCaps = function(arr) {
@@ -18,6 +24,8 @@ let convertToTitleCaps = function(arr) {
 let stringArray = ["apple", "banana", "cherry"];
 let titleCapsArray = convertToTitleCaps(stringArray);
 console.log(titleCapsArray);
+//outpt
+//['apple','banana','cherry']
 
 // 3.Sum of all numbers in an array:
 let sumOfNumbers = function(arr) {
@@ -28,6 +36,8 @@ let sumOfNumbers = function(arr) {
 let numbers = [1, 2, 3, 4, 5];
 let sum = sumOfNumbers(numbers);
 console.log(sum);
+//output
+//15
 
 // 4.Return all the prime numbers in an array:
 let isPrime = function(num) {
@@ -49,6 +59,8 @@ let getPrimeNumbers = function(arr) {
 let numberArray = [2, 3, 4, 5, 6, 7, 8, 9, 10];
 let primes = getPrimeNumbers(numberArray);
 console.log(primes);
+//output
+//[2,3,5,7]
 
 //IIFE
 // 1.Return all the palindromes in an array:
@@ -58,8 +70,9 @@ let palindromes = (function(arr) {
         return str === reversedStr;
     });
 })(["level", "hello", "world", "deed"]);
-
 console.log(palindromes);
+//output
+//['level','deed']
 
 // 2.Return median of two sorted arrays of the same size:
 let medianOfArrays = (function(arr1, arr2) {
@@ -75,8 +88,9 @@ let medianOfArrays = (function(arr1, arr2) {
         return sortedArray[Math.floor(length / 2)];
     }
 })([1, 2, 3], [4, 5, 6]);
-
 console.log(medianOfArrays);
+//output
+//3.5
 
 //3.Remove duplicates from an array:
 let uniqueArray = (function(arr) {
@@ -84,16 +98,18 @@ let uniqueArray = (function(arr) {
         return self.indexOf(value) === index;
     });
 })([1, 2, 3, 4, 1, 2, 5, 6]);
-
 console.log(uniqueArray);
+//output
+//[1,2,3,4,5,6]
 
 //4.Rotate an array by k times:
 let rotateArray = (function(arr, k) {
     k = k % arr.length;
     return arr.slice(k).concat(arr.slice(0, k));
 })([1, 2, 3, 4, 5], 2);
-
 console.log(rotateArray);
+//output
+//[3,4,5,1,2]
 
 
 //Arrow function
@@ -106,6 +122,12 @@ let OddNumbers = arr => {
     });
 };
 OddNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+//output
+// 1
+// 3
+// 5
+// 7
+// 9
 
 //2.Convert all the strings to title caps in a string array:
 let ToTitleCaps = arr => {
@@ -116,6 +138,8 @@ let ToTitleCaps = arr => {
 let stringArr = ["apple", "banana", "cherry"];
 let titleCaps = ToTitleCaps(stringArray);
 console.log(titleCapsArray);
+//output
+//['Apple','Banana','Cherry']
 
 //3.Sum of all numbers in an array:
 let sumNumbers = arr => {
@@ -124,6 +148,8 @@ let sumNumbers = arr => {
 let number = [1, 2, 3, 4, 5];
 let sum1 = sumNumbers(numbers);
 console.log(sum);
+//output
+//15
 
 //4.Return all the prime numbers in an array:
 let Primes = num => {
@@ -144,6 +170,8 @@ let PrimeNumbers = arr => {
 let numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10];
 let prime = PrimeNumbers(numberArray);
 console.log(primes);
+//output
+//[2,3,5,7]
 
 //5.Return all the palindromes in an array:
 let palin = arr => {
@@ -153,5 +181,7 @@ let palin = arr => {
     });
 };
 let words = ["level", "hello", "radar", "deed"];
-let palindromeWords = palindromes(words);
+let palindromeWords = palin(words);
 console.log(palindromeWords);
+//output
+//['level','radar','deed']
